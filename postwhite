@@ -402,10 +402,18 @@ cleanup() {
 }
 cleanup
 
-# Reload Postfix to pick up changes in whitelist
-if [ x"$reload_postfix" = x"yes" ]; then
-printf '\nReloading Postfix configuration to refresh rules...\n'
+# Postfix Task
+if [ x"$postfix_task" = x"reload" ]; 
+then
+	printf '\nReloading Postfix configuration to refresh rules...\n'
 	${postfixbinarypath}/postfix reload
+
+elif [ x"$postfix_task" = x"restart" ]; 
+then
+	printf '\nRestarting Postfix...\n'
+	${postfixbinarypath}/postfix restart
+else
+	# Do Nothing
 fi
 
 printf '\nDone!\n'
