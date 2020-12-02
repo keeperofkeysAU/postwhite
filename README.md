@@ -82,12 +82,12 @@ To create additional customized query scripts for mailers that don't publish out
 
 Depending on the size of the range you wish to query, this script could take a long time to complete. I recommend testing on a small fraction of the mailhost's range before pushing the script to a production environment.
 
-## Yahoo! Hosts
-As mentioned in the **Known Issues**, Yahoo!'s SPF record doesn't support queries to expose their netblocks, and therefore a dynamic list of Yahoo mailers can't be built. However, Yahoo! does publish a list of outbound mailer IP addresses at https://help.yahoo.com/kb/SLN23997.html.
+## Yahoo! Hosts - Now Merged (Verizon/AOL/Yahoo as they are owned by VerizonMedia)
+As mentioned in the **Known Issues**, Verizon/AOL/Yahoo's SPF record doesn't support queries to expose their netblocks, and therefore a dynamic list of Yahoo mailers can't be built. However, Verizon/AOL/Yahoo! does publish a list of outbound mailer IP addresses at https://postmaster.verizonmedia.com/mail-server.
 
-A list of Yahoo! outbound IP addresses, based on the linked knowledgebase article and formatted for Postwhite, is included as ```yahoo_static_hosts.txt```. By default, the contents of this file are added to the final whitelist. To disable the Yahoo! IPs from being included in your whitelist, set the ```include_yahoo``` configuration option in ```/etc/postwhite.conf``` to ```include_yahoo="no"```.
+A list of Verizon/AOL/Yahoo! outbound IP addresses, based on the linked knowledgebase article and formatted for Postwhite, is included as ```yahoo_static_hosts.txt```. By default, the contents of this file are added to the final whitelist. To disable the Verizon/AOL/Yahoo! IPs from being included in your whitelist, set the ```include_yahoo``` configuration option in ```/etc/postwhite.conf``` to ```include_yahoo="no"```.
 
-The ```yahoo_static_hosts.txt``` file can be periodically updated by running the ```scrape_yahoo``` script, which requires either **Wget** or **cURL** (included on most systems). The ```scrape_yahoo``` script reads the Postwhite config file for the location to write the updated list of Yahoo! oubound IP addresses. Run the ```scrape_yahoo``` script periodically via cron (I recommend no more than weekly) to automatically update the list of Yahoo! IPs used by Postwhite.
+The ```yahoo_static_hosts.txt``` file can be periodically updated by running the ```scrape_yahoo``` script, which requires either **Wget** or **cURL** (included on most systems). The ```scrape_yahoo``` script reads the Postwhite config file for the location to write the updated list of Yahoo! oubound IP addresses. Run the ```scrape_yahoo``` script periodically via cron (I recommend no more than weekly) to automatically update the list of Verizon/AOL/Yahoo! IPs used by Postwhite.
 
 ## Blacklisting
 To enable blacklisting, set ```enable_blacklist=yes``` and then list blacklisted hosts in ```blacklist_hosts```. Please refer to the blacklisting warning above. Blacklisting is not the primary purpose of Postwhite, and most users will never need to turn it on.
