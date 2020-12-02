@@ -82,7 +82,7 @@ To create additional customized query scripts for mailers that don't publish out
 
 Depending on the size of the range you wish to query, this script could take a long time to complete. I recommend testing on a small fraction of the mailhost's range before pushing the script to a production environment.
 
-## Yahoo! Hosts - Now Merged (Verizon/AOL/Yahoo as they are owned by VerizonMedia)
+## VerizonMedia Hosts - (Verizon/AOL/Yahoo)
 As mentioned in the **Known Issues**, Verizon/AOL/Yahoo's SPF record doesn't support queries to expose their netblocks, and therefore a dynamic list of Yahoo mailers can't be built. However, Verizon/AOL/Yahoo! does publish a list of outbound mailer IP addresses at https://postmaster.verizonmedia.com/mail-server.
 
 A list of Verizon/AOL/Yahoo! outbound IP addresses, based on the linked knowledgebase article and formatted for Postwhite, is included as ```yahoo_static_hosts.txt```. By default, the contents of this file are added to the final whitelist. To disable the Verizon/AOL/Yahoo! IPs from being included in your whitelist, set the ```include_yahoo``` configuration option in ```/etc/postwhite.conf``` to ```include_yahoo="no"```.
