@@ -41,7 +41,7 @@ webmail_hosts="aol.com fastmail.com google.com gmail.com gmx.com hotmail.com icl
 	zoho.com simplelogin.co qq.com mail.ru yandex.ru rambler.ru protonmail.com gmx.com"
 
 social_hosts="facebook.com facebookmail.com instagram.com linkedin.com \
-	pinterest.com reddit.com tumblr.com twitter.com"
+	pinterest.com reddit.com tumblr.com twitter.com twitch.tv"
 
 commerce_hosts="amazon.com craigslist.org ebay.com paypal.com email.gog.com email2.gog.com \
 	gog.com	steampowered.com notice.aliexpress.com aliexpress.com booking.com ozsale.com.au \
