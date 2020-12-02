@@ -275,7 +275,7 @@ fi
 
 if [ x"$include_zuora" = x"yes" ] ; then
 	printf "\nIncluding scraped Zuora! outbound hosts...\n"
-
+	
 	cat "${zuora_static_hosts}" >> "${tmp1}"
 fi
 
@@ -412,7 +412,7 @@ then
 elif [ x"$postfix_task" = x"restart" ]; 
 then
 	printf '\nRestarting Postfix...\n'
-	${postfixbinarypath}/postfix restart
+	/usr/bin/systemctl restart postfix
 else
 	printf '\nNo task for Postfix...\n'
 fi
