@@ -41,7 +41,7 @@ I also recommend updating the list of known VerizonMedia(Verizon/AOL/Yahoo)! IP 
 
     @weekly /usr/local/bin/postwhite/scrape_verizonmedia > /dev/null 2>&1 #Update VerizonMedia(Verizon/AOL/Yahoo)! IPs for Postscreen Whitelists
 
-*(Please read more about Yahoo! hosts below)*
+*(Please read more about VerizonMedia! hosts below)*
 
 When executed, Postwhite will generate a file named ```postscreen_spf_whitelist.cidr```, write it to your Postfix directory, then reload Postfix to pick up any changes.
 
