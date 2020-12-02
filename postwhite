@@ -38,7 +38,7 @@ lastupdated="02 December 2020"
 # Hosts to query
 webmail_hosts="aol.com fastmail.com google.com gmail.com gmx.com hotmail.com icloud.com \
 	inbox.com mail.com microsoft.com e-mail.microsoft.com outlook.com secure-mailgate.com \
-	zoho.com simplelogin.co qq.com"
+	zoho.com simplelogin.co qq.com mail.ru yandex.ru rambler.ru protonmail.com gmx.com"
 
 social_hosts="facebook.com facebookmail.com instagram.com linkedin.com \
 	pinterest.com reddit.com tumblr.com twitter.com"
