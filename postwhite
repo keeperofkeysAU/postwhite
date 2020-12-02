@@ -6,8 +6,8 @@
 # By Steve Jenkins (https://www.stevejenkins.com/)                #
 ###################################################################
 
-version="3.4"
-lastupdated="14 April 2018"
+version="3.5"
+lastupdated="02 December 2020"
 
 # Usage: 1) Place entire /postwhite directory in /usr/local/bin
 #	 2) Move postwhite.conf to /etc
@@ -253,10 +253,10 @@ for h in ${custom_hosts}; do
 	query_host "${h}"
 done
 
-if [ x"$include_yahoo" = x"yes" ] ; then
-	printf "\nIncluding scraped Yahoo! outbound hosts...\n"
+if [ x"$include_verizonmedia" = x"yes" ] ; then
+	printf "\nIncluding scraped VerizonMedia! outbound hosts...\n"
 
-	cat "${yahoo_static_hosts}" >> "${tmp1}"
+	cat "${verizonmedia_static_hosts}" >> "${tmp1}"
 fi
 
 if [ x"$enable_blacklist" = x"yes" ] ; then
