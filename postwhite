@@ -259,6 +259,12 @@ if [ x"$include_verizonmedia" = x"yes" ] ; then
 	cat "${verizonmedia_static_hosts}" >> "${tmp1}"
 fi
 
+if [ x"$include_zuora" = x"yes" ] ; then
+	printf "\nIncluding scraped Zuora! outbound hosts...\n"
+
+	cat "${zuora_static_hosts}" >> "${tmp1}"
+fi
+
 if [ x"$enable_blacklist" = x"yes" ] ; then
 	printf "\nQuerying blacklist hosts...\n"
 

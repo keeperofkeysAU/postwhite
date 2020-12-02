@@ -15,7 +15,7 @@ lastupdated="17 April 2018"
 whitelist_file="/etc/postfix/postscreen_ovh_whitelist.cidr"
 
 # set debug=true to display output as this script runs
-debug=false
+debug=true
 
 ###########################################################################
         
