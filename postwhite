@@ -162,7 +162,7 @@ normalize_ip() {
 
 # Create host query function
 query_host() {
-	printf "\nProcessing: $1...\n"	
+	printf "Processing: $1...\n"
 	"${spftoolspath}"/despf.sh "$1" | (grep -Ei ^ip || true ) >> "${tmp1}"
 }
 
