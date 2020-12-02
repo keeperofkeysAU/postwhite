@@ -162,6 +162,7 @@ normalize_ip() {
 
 # Create host query function
 query_host() {
+	printf "\nProcessing: $1...\n"	
 	"${spftoolspath}"/despf.sh "$1" | (grep -Ei ^ip || true ) >> "${tmp1}"
 }
 
@@ -413,7 +414,7 @@ then
 	printf '\nRestarting Postfix...\n'
 	${postfixbinarypath}/postfix restart
 else
-	# Do Nothing
+	printf '\nNo task for Postfix...\n'
 fi
 
 printf '\nDone!\n'
