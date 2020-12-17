@@ -1,4 +1,5 @@
-- MODIFIED VERSION - 
+- MODIFIED VERSION
+
 [ ![Codeship Status for stevejenkins/postwhite](https://app.codeship.com/projects/8cd4ff10-77b6-0133-22fe-02534086190b/status?branch=master)](https://app.codeship.com/projects/118483) [![Issue Count](https://codeclimate.com/github/stevejenkins/postwhite/badges/issue_count.svg)](https://codeclimate.com/github/stevejenkins/postwhite)
 
 # Postwhite - Automatic Postcreen Whitelist & Blacklist Generator
