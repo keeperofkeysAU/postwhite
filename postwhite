@@ -45,18 +45,21 @@ social_hosts="facebook.com facebookmail.com instagram.com linkedin.com \
 
 commerce_hosts="amazon.com craigslist.org ebay.com paypal.com email.gog.com email2.gog.com \
 	gog.com	steampowered.com notice.aliexpress.com aliexpress.com booking.com ozsale.com.au \
-	intuit.com xero.com myob.com stripe.com 2checkout.com pandadoc.com docusign.com netflix.com"
+	intuit.com xero.com myob.com stripe.com 2checkout.com pandadoc.com docusign.com netflix.com \
+	disneyplus.com stan.com.au hulu.com.au"
 
 bulk_hosts="amazonses.com authsmtp.com constantcontact.com \
 	cust-spf.exacttarget.com exacttarget.com fbmta.com fishbowl.com \
 	icontact.com mailchimp.com mailgun.com mailjet.com messagelabs.com \
 	messagegears.net sendgrid.com sendgrid.net sparkpost.com sparkpostmail.com \
-	alibabacloud.com spf1.dm.aliyun.com aliyun.com"
+	alibabacloud.com spf1.dm.aliyun.com aliyun.com relay.mailchannels.net mailchannels.net"
 	
 isp_hosts="optusnet.com.au bigpond.com iinet.net.au internode.on.net apn.net.au \
-	activ8.net.au spirit.com.au tpg.com.au"
+	activ8.net.au spirit.com.au tpg.com.au telstra.com.au"
 
-misc_hosts="github.com zendesk.com adobe.com repairtechsolutions.com repairshopr.com"
+misc_hosts="github.com zendesk.com adobe.com repairtechsolutions.com repairshopr.com simple-help.com \
+	freshdesk.com sender1.freshdesk.com sender2.freshdesk.com emailus.freshdesk.com emaileuc.freshdesk.com \
+	sg-warmup.freshemail.io"
 
 permit_line_v4="%s\tpermit\n"
 reject_line_v4="%s\treject\n"
@@ -277,6 +280,12 @@ if [ x"$include_zuora" = x"yes" ] ; then
 	printf "\nIncluding scraped Zuora! outbound hosts...\n"
 	
 	cat "${zuora_static_hosts}" >> "${tmp1}"
+fi
+
+if [ x"$include_ovh" = x"yes" ] ; then
+        printf "\nIncluding scraped OVH! outbound hosts...\n"
+
+        cat "${ovh_static_hosts}" >> "${tmp1}"
 fi
 
 if [ x"$enable_blacklist" = x"yes" ] ; then
