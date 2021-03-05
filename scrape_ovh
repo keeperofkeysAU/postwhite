@@ -87,7 +87,7 @@ fi
 
 debug "Formatting custom whitelist...\n"
 
-grep 'has address' "${temp_file}" | awk '{print "ipv4:" $4}' | sort -uV  > "${whitelist_file}"
+grep 'has address' "${temp_file}" | awk '{print "ip4:" $4}' | sort -uV  > "${whitelist_file}"
 
 debug "Hostname lookups preserved in file: ${temp_file}\n"
 
