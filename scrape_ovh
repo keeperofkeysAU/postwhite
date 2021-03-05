@@ -9,9 +9,10 @@
 # By Jesse Norell (https://github.com/jnorell)
 # and Steve Jenkins (https://www.stevejenkins.com/)
 # Updated By Adam Mutimer (https://github.com/keeperofkeysAU)
+## No longer external, now data is processed by postwhite
 
-version="1.3"
-lastupdated="17 April 2018"
+version="1.4"
+lastupdated="06 March 2021"
 
 whitelist_file="ovh_static_hosts.txt"
 
