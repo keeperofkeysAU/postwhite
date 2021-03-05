@@ -39,9 +39,11 @@ I recommend cloning both the SPF-Tools and the Postwhite repos into your ```/usr
 
     @daily /usr/local/bin/postwhite/postwhite > /dev/null 2>&1 #Update Postscreen Whitelists
 
-I also recommend updating the list of known VerizonMedia(Verizon/AOL/Yahoo)! IP outbound mailers weekly:
+I also recommend updating the lists of scraped mailers weekly:
 
     @weekly /usr/local/bin/postwhite/scrape_verizonmedia > /dev/null 2>&1 #Update VerizonMedia(Verizon/AOL/Yahoo)! IPs for Postscreen Whitelists
+    @weekly /usr/local/bin/postwhite/scrape_zuora > /dev/null 2>&1 #Update Zuora! IPs for Postscreen Whitelists
+    @weekly /usr/local/bin/postwhite/scrape_ovh > /dev/null 2>&1 #Update OVH! IPs for Postscreen Whitelists
 
 *(Please read more about VerizonMedia! hosts below)*
 
